@@ -1,0 +1,95 @@
+import React, { Component } from "react";
+import { Animated } from "react-animated-css";
+import logo from "../images/logo.svg";
+import twitter from "../images/twitter.svg";
+import youtube from "../images/youtube.svg";
+import github from "../images/github.svg";
+import discord from "../images/discord.svg";
+
+class Nav extends Component {
+  render() {
+    var home = "nav-item";
+    var works = "nav-item";
+    var contact = "nav-item";
+    if (this.props.current === "home") {
+      home += " current";
+    } else if (this.props.current === "works") {
+      works += " current";
+    } else if (this.props.current === "contact") {
+      contact += " current";
+    }
+    return (
+      <Animated animationIn="fadeInDown" isVisible={true}>
+        <div className="nav top drop-shadow">
+          <img
+            src={logo}
+            width="50px"
+            height="50px"
+            alt="ngregrichardson-logo"
+          />
+          <h4 className="nav-logo nav-px">ngregrichardson</h4>
+          <button
+            className={home}
+            onClick={() => {
+              this.props.onPageChange("home");
+            }}
+          >
+            Home
+          </button>
+          <button
+            className={works}
+            onClick={() => {
+              this.props.onPageChange("works");
+            }}
+          >
+            My Works
+          </button>
+          <button
+            className={contact}
+            onClick={() => {
+              this.props.onPageChange("contact");
+            }}
+          >
+            Contact Me
+          </button>
+          <div className="col right">
+            <a
+              className="nav-item sm-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/ngregrichardson"
+            >
+              <img className="sm-icon" src={twitter} alt="twitter-logo" />
+            </a>
+            <a
+              className="nav-item sm-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/channel/UCUB_cxZFm_72B5AVvZpJpYg"
+            >
+              <img className="sm-icon" src={youtube} alt="youtube-logo" />
+            </a>
+            <a
+              className="nav-item sm-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/ngregrichardson"
+            >
+              <img className="sm-icon" src={github} alt="github-logo" />
+            </a>
+            <a
+              className="nav-item sm-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.gg/6UczS4X"
+            >
+              <img className="sm-icon" src={discord} alt="discord-logo" />
+            </a>
+          </div>
+        </div>
+      </Animated>
+    );
+  }
+}
+
+export default Nav;
