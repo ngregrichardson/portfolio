@@ -2,10 +2,10 @@
   "name": "nrdesign.xyz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "home.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"node server.js\" \"cd client && npm start\""
+    "start": "concurrently \"node home.js\" \"cd client && npm start\""
   },
   "author": "",
   "license": "ISC",
