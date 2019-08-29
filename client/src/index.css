@@ -5,17 +5,32 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 html,
 body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
   height: 100%;
+}
+
+#works {
+  margin-top: 3%;
+  align-items: unset;
 }
 
 a {
   text-decoration: none;
   color: black !important;
+}
+
+.text-center {
+  text-align: center;
 }
 
 a:hover {
@@ -37,6 +52,106 @@ code {
     monospace;
 }
 
+/* NAV */
+#nav {
+  display: flex;
+}
+.nav {
+  background-color: white;
+  opacity: 0.7;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#toggle-mobile-menu {
+  content: url("./images/open-menu-icon.svg");
+  display: none;
+  z-index: 2;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.brand {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 80%;
+  padding: 0px 10px;
+}
+
+.nav-items {
+  padding: 0px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+button.nav-item {
+  border: none;
+  margin: 0px;
+  padding: 0px 25px;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+.sm-items {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sm-link {
+  padding: 0px 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+
+.sm-icon {
+  height: 60%;
+  cursor: pointer;
+}
+
+.sm-icon-sm {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* HOME */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-section {
+  flex: 1;
+}
+
 .text-align-right {
   text-align: right;
 }
@@ -48,19 +163,28 @@ code {
   padding-left: 5px;
 }
 
-button.nav-item {
-  margin: 0px;
-  padding: 1rem 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 100%;
+.btn-outline {
+  background: transparent;
+  padding: 5px;
+  font-size: 1em;
+  border: solid 2px white;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  transform: scale(1.01);
+}
+
+.btn-outline:active {
+  transform: scale(0.99);
+}
+
+.logo-lg {
+  height: 100%;
 }
 
 .nav-item {
+  cursor: pointer;
   text-decoration: none;
   color: black;
   background-color: transparent;
@@ -113,36 +237,22 @@ button.nav-item {
   display: none;
 }
 
-button:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
 #background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
   background: url("./images/background.jpg") no-repeat center center;
   background-size: cover;
-  transform: scale(1.1);
-  z-index: -1;
 }
 
 .fill-width {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-}
-.nav {
-  background-color: white;
-  opacity: 0.7;
-  z-index: 10;
 }
 
 .w-100 {
@@ -180,32 +290,9 @@ button:active {
   text-align: left;
 }
 
-.card-header-icon {
-  padding-right: 0px !important;
-}
-
-.sm-icon {
-  width: 35px;
-  height: 35px;
-}
-
-.sm-icon-sm {
-  width: 25px;
-  height: 25px;
-}
-
-.sm-icon-sm:hover {
-  cursor: pointer;
-}
-
-.sm-icon:hover {
-  cursor: pointer;
-}
-
 .card-title {
   font-size: 1.5em;
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+  padding-left: 10px !important;
 }
 
 .not-a-link {
@@ -220,51 +307,91 @@ button:active {
   opacity: 1 !important;
 }
 
-.sm-link {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
 .mb-sm {
   margin-bottom: 5px;
-}
-
-.nav-item {
-  cursor: pointer !important;
 }
 
 input,
 textarea {
   width: 100% !important;
   box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-bottom: solid 2px white;
+  margin: 10px 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-left: 4px;
 }
 
-input[type="submit"] {
+select {
+  float: right;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: solid 2px white;
+  opacity: 0.5;
+  margin: 10px 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button[type="submit"] {
+  background: black;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  margin: 0px auto;
   max-width: 50%;
   margin: 0 auto;
-}
-
-.top {
-  z-index: 1000 !important;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
 }
 
 .card {
+  flex-basis: 25%;
+}
+
+.card-lg {
+  flex-basis: 75%;
+}
+
+.card-mg {
+  margin: 0px 10px;
   background: rgba(255, 255, 255, 0.8);
-  max-width: 60%;
-  margin: 0 auto;
   border-radius: 2px;
-  height: auto;
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.55));
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.55));
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .fog {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   height: 100vh;
-  width: 100%;
-  z-index: -1;
+  width: 100vw;
 }
 .fog__container {
   position: absolute;
@@ -324,5 +451,87 @@ input[type="submit"] {
   100% {
     transform: scale(1.5);
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .card {
+    flex-basis: 50%;
+  }
+  .card-mg {
+    margin: 20px 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    overflow-y: auto;
+  }
+  #nav {
+    flex-direction: column;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 1;
+  }
+  #toggle-mobile-menu {
+    display: block;
+  }
+  .brand {
+    height: 20%;
+  }
+
+  .brand-logo {
+    height: 50%;
+  }
+  #works {
+    margin-top: 0;
+  }
+  .nav-items {
+    flex-direction: column;
+    width: 100%;
+  }
+  .header {
+    flex-direction: row;
+  }
+  button.nav-item {
+    width: 100%;
+    font-size: 2em;
+  }
+
+  .sm-items {
+    height: 10%;
+  }
+
+  .sm-link {
+    height: 80%;
+  }
+  .logo-lg {
+    width: 90%;
+  }
+  #background {
+    transform: scale(1);
+    background-size: cover;
+  }
+  .card {
+    flex-basis: 100%;
+  }
+  .card-lg {
+    flex-basis: 80%;
+  }
+  .logo-wrapper {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  body {
+    overflow-y: auto;
+  }
+  .card-lg {
+    flex-basis: 90%;
   }
 }

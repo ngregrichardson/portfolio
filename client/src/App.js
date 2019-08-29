@@ -57,31 +57,31 @@ class App extends Component {
   render() {
     if (this.state.page === "works") {
       return (
-        <div>
-          <Nav current="works" onPageChange={this.handlePageChange} />
+        <div style={{ height: "100%" }}>
           <Background />
+          <Nav current="works" onPageChange={this.handlePageChange} />
           <Works />
         </div>
       );
     } else if (this.state.page === "contact") {
       return (
-        <div>
-          <Nav current="contact" onPageChange={this.handlePageChange} />
+        <div style={{ height: "100%" }}>
           <Background />
+          <Nav current="contact" onPageChange={this.handlePageChange} />
           <Contact />
         </div>
       );
     } else if (this.state.page === "home" || this.state.page === "") {
       return (
-        <div>
-          <Nav current="home" onPageChange={this.handlePageChange} />
+        <div style={{ height: "100%" }}>
           <Background />
+          <Nav current="home" onPageChange={this.handlePageChange} />
           <Home onPageChange={this.handlePageChange} />
         </div>
       );
     } else {
       return (
-        <div>
+        <div style={{ height: "100%" }}>
           <Nav onPageChange={this.handlePageChange} />
           <Background />
           <FourOhFour />

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Background extends Component {
   render() {
     return (
-      <div>
+      <div style={{ zIndex: -1, position: "fixed" }}>
         <div id="background" />
         <div className="fog">
           <div className="fog__container">

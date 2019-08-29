@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import { Animated } from "react-animated-css";
 
 class Contact extends Component {
   state = {
@@ -18,7 +18,7 @@ class Contact extends Component {
 
   handleSubmit = async e => {
     e.preventDefault();
-    this.setState({ loading: true });
+    this.setState({ error: "", success: "", loading: true });
     let data = this.state;
     if (data.reason === "") data.reason = "Suggestion";
     fetch("/submit", {
@@ -56,21 +56,66 @@ class Contact extends Component {
 
   render() {
     return (
-      <div>
-        <div className="row mt-break-sm">
-          <div className="col text-center">
-            <Card
-              title="Contact Me"
-              form={true}
-              onChange={this.handleChange}
-              onSubmit={this.handleSubmit}
-              error={this.state.error}
-              success={this.state.success}
-              loading={this.state.loading}
-              body="Team Tracker is a new way to watch FIRST Robotics Competitions. With many different worldwide events every weekend, watching all of the teams you like can be tough. Team Tracker provides a way to track every team you want to as if they are all at one event."
-            />
+      <div className="content">
+        <Animated animationIn="fadeInDown" isVisible={true} className="card-lg">
+          <div className="card-mg">
+            <div className="nav box-shadow">
+              <h2 className="nav-item card-title not-a-link">Contact Me</h2>
+            </div>
+            <form className="card-body" onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                placeholder="Name..."
+                onChange={this.handleChange}
+                name="name"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email..."
+                onChange={this.handleChange}
+                name="email"
+                required
+              />
+              <select onChange={this.handleChange} name="reason">
+                <option>Suggestion</option>
+                <option>Comment</option>
+                <option>Question</option>
+                <option>Collaborate</option>
+                <option>Other</option>
+              </select>
+              <textarea
+                placeholder="Message..."
+                onChange={this.handleChange}
+                name="message"
+                required
+              />
+              <div className="text-center mb-sm">
+                {this.state.loading === true ? (
+                  <button type="submit" style={{ display: "inline-block" }}>
+                    <span
+                      style={{
+                        opacity: 0,
+                        position: "absolute",
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                      }}
+                    >
+                      Send
+                    </span>
+                    <div className="signal" />
+                  </button>
+                ) : (
+                  <button type="submit">Send</button>
+                )}
+              </div>
+              <p id="error">{this.state.error}</p>
+              <p id="success">{this.state.success}</p>
+            </form>
           </div>
-        </div>
+        </Animated>
       </div>
     );
   }

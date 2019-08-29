@@ -5,8 +5,8 @@ import animatedLogo from "../images/logo_animated.svg";
 class Home extends Component {
   render() {
     return (
-      <div className="row mt-break">
-        <div className="col text-align-right">
+      <div className="content" style={{ zIndex: 0 }}>
+        <div className="home-section text-align-right">
           <Animated animationIn="fadeInLeft" isVisible={true}>
             <h1 className="animate slideInRight white filter-shadow">
               Hi, I'm Noah.
@@ -15,7 +15,7 @@ class Home extends Component {
               I code.
             </h2>
             <button
-              className="outline animate slideInRight white filter-shadow"
+              className="btn-outline animate slideInRight white filter-shadow"
               onClick={() => {
                 this.props.onPageChange("works");
               }}
@@ -24,13 +24,15 @@ class Home extends Component {
             </button>
           </Animated>
         </div>
-        <div className="col text-align-left">
-          <Animated animationIn="fadeInDown" isVisible={true}>
+        <div className="home-section">
+          <Animated
+            animationIn="fadeInDown"
+            isVisible={true}
+            className="logo-wrapper"
+          >
             <img
               src={animatedLogo}
-              width="300px"
-              height="300px"
-              className="filter-shadow"
+              className="logo-lg filter-shadow"
               alt="ngregrichardson-logo"
             />
           </Animated>

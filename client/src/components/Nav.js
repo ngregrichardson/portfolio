@@ -19,40 +19,44 @@ class Nav extends Component {
       contact += " current";
     }
     return (
-      <Animated animationIn="fadeInDown" isVisible={true}>
-        <div className="nav top drop-shadow">
-          <img
-            src={logo}
-            width="50px"
-            height="50px"
-            alt="ngregrichardson-logo"
-          />
-          <h4 className="nav-logo nav-px">ngregrichardson</h4>
-          <button
-            className={home}
-            onClick={() => {
-              this.props.onPageChange("home");
-            }}
-          >
-            Home
-          </button>
-          <button
-            className={works}
-            onClick={() => {
-              this.props.onPageChange("works");
-            }}
-          >
-            My Works
-          </button>
-          <button
-            className={contact}
-            onClick={() => {
-              this.props.onPageChange("contact");
-            }}
-          >
-            Contact Me
-          </button>
-          <div className="col right">
+      <Animated
+        animationIn="fadeInDown"
+        isVisible={true}
+        style={{ zIndex: 1, position: "relative" }}
+      >
+        <i height="30px" width="30px" id="toggle-mobile-menu"></i>
+        <div className="nav drop-shadow" id="nav">
+          <div className="brand">
+            <img src={logo} className="brand-logo" alt="ngregrichardson-logo" />
+            <h4 className="nav-logo nav-px">ngregrichardson</h4>
+          </div>
+          <div className="nav-items">
+            <button
+              className={home}
+              onClick={() => {
+                this.props.onPageChange("home");
+              }}
+            >
+              Home
+            </button>
+            <button
+              className={works}
+              onClick={() => {
+                this.props.onPageChange("works");
+              }}
+            >
+              My Works
+            </button>
+            <button
+              className={contact}
+              onClick={() => {
+                this.props.onPageChange("contact");
+              }}
+            >
+              Contact Me
+            </button>
+          </div>
+          <div className="sm-items">
             <a
               className="nav-item sm-link"
               target="_blank"
