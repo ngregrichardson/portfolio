@@ -22,7 +22,15 @@ class Card extends Component {
                 rel="noopener noreferrer"
                 className={link}
               >
-                <h3>{this.props.title}</h3>
+                <h3
+                  style={
+                    !link.includes("not-a-link")
+                      ? { textDecoration: "underline" }
+                      : {}
+                  }
+                >
+                  {this.props.title}
+                </h3>
               </a>
             </div>
             <div>

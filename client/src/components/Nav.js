@@ -22,9 +22,17 @@ class Nav extends Component {
       <Animated
         animationIn="fadeInDown"
         isVisible={true}
-        style={{ zIndex: 1, position: "relative" }}
+        style={{ zIndex: 1, position: "sticky", top: "0px" }}
       >
-        <i height="30px" width="30px" id="toggle-mobile-menu"></i>
+        <i
+          height="30px"
+          width="30px"
+          id="toggle-mobile-menu"
+          className="closed drop-shadow"
+          style={{
+            position: "fixed"
+          }}
+        ></i>
         <div className="nav drop-shadow" id="nav">
           <div className="brand">
             <img src={logo} className="brand-logo" alt="ngregrichardson-logo" />

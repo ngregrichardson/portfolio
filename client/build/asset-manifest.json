@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bd47c2b.chunk.css",
-    "main.js": "/static/js/main.e8314a8f.chunk.js",
-    "main.js.map": "/static/js/main.e8314a8f.chunk.js.map",
+    "main.css": "/static/css/main.d3155d43.chunk.css",
+    "main.js": "/static/js/main.02c7ade4.chunk.js",
+    "main.js.map": "/static/js/main.02c7ade4.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.1013c19d.chunk.js": "/static/js/2.1013c19d.chunk.js",
-    "static/js/2.1013c19d.chunk.js.map": "/static/js/2.1013c19d.chunk.js.map",
+    "static/js/2.767e4a89.chunk.js": "/static/js/2.767e4a89.chunk.js",
+    "static/js/2.767e4a89.chunk.js.map": "/static/js/2.767e4a89.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.bb5329b04d2588a1ed1bd2fd503415cb.js": "/precache-manifest.bb5329b04d2588a1ed1bd2fd503415cb.js",
+    "precache-manifest.647d3980874966398048bccfae637e05.js": "/precache-manifest.647d3980874966398048bccfae637e05.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0bd47c2b.chunk.css.map": "/static/css/main.0bd47c2b.chunk.css.map",
-    "static/media/index.css": "/static/media/background.014a77af.jpg",
+    "static/css/main.d3155d43.chunk.css.map": "/static/css/main.d3155d43.chunk.css.map",
+    "static/media/index.css": "/static/media/open-menu-icon.e40a7f96.svg",
     "static/media/discord.svg": "/static/media/discord.a394c57a.svg",
-    "static/media/github.svg": "/static/media/github.701d3f7d.svg",
-    "static/media/logo.svg": "/static/media/logo.5a80c983.svg",
-    "static/media/logo_animated.svg": "/static/media/logo_animated.5657f9fe.svg",
-    "static/media/twitter.svg": "/static/media/twitter.546cd79b.svg",
-    "static/media/youtube.svg": "/static/media/youtube.e571414b.svg"
+    "static/media/github.svg": "/static/media/github.9b95fa2c.svg",
+    "static/media/logo.svg": "/static/media/logo.62b693d8.svg",
+    "static/media/logo_animated.svg": "/static/media/logo_animated.869106d0.svg",
+    "static/media/twitter.svg": "/static/media/twitter.c9233fa8.svg",
+    "static/media/youtube.svg": "/static/media/youtube.accc23a2.svg"
   }
 }

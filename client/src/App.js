@@ -57,7 +57,7 @@ class App extends Component {
   render() {
     if (this.state.page === "works") {
       return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%", minHeight: "100%" }}>
           <Background />
           <Nav current="works" onPageChange={this.handlePageChange} />
           <Works />
@@ -65,7 +65,7 @@ class App extends Component {
       );
     } else if (this.state.page === "contact") {
       return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%", minHeight: "100%" }}>
           <Background />
           <Nav current="contact" onPageChange={this.handlePageChange} />
           <Contact />
@@ -73,7 +73,7 @@ class App extends Component {
       );
     } else if (this.state.page === "home" || this.state.page === "") {
       return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%", minHeight: "100%" }}>
           <Background />
           <Nav current="home" onPageChange={this.handlePageChange} />
           <Home onPageChange={this.handlePageChange} />
@@ -81,7 +81,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div style={{ height: "100%" }}>
+        <div style={{ height: "100%", minHeight: "100%" }}>
           <Nav onPageChange={this.handlePageChange} />
           <Background />
           <FourOhFour />

@@ -38,24 +38,38 @@ moveBackground();
 
 $("#toggle-mobile-menu").on("click", () => {
   if ($("#nav").css("display") === "none") {
-    $("#nav")
-      .fadeIn(200)
-      .css("display", "flex");
-    $("#toggle-mobile-menu").css(
-      "content",
-      'url("./images/close-menu-icon.svg")'
-    );
+    openMenu();
   } else {
-    $("#nav").fadeOut(200);
-    $("#toggle-mobile-menu").css(
-      "content",
-      'url("./images/open-menu-icon.svg")'
-    );
+    closeMenu();
   }
 });
 
 $("#nav .nav-items .nav-item").on("click", () => {
   if (screen.width <= 720) {
-    $("#nav").fadeOut(200);
+    closeMenu();
+  }
+});
+
+let closeMenu = () => {
+  $("#nav").fadeOut(200);
+  $("#toggle-mobile-menu").addClass("closed drop-shadow");
+  $("#toggle-mobile-menu").removeClass("open");
+};
+
+let openMenu = () => {
+  $("#nav")
+    .fadeIn(200)
+    .css("display", "flex");
+  $("#toggle-mobile-menu").addClass("open");
+  $("#toggle-mobile-menu").removeClass("closed drop-shadow");
+};
+
+$(window).resize(() => {
+  if (screen.width > 720) {
+    $("#nav")
+      .show()
+      .css("display", "flex");
+  } else {
+    $("#nav").hide();
   }
 });
