@@ -108,7 +108,7 @@ function Projects() {
                   </div>
                 ) : (
                   <div className="d-flex flex-row align-items-center">
-                    <p className={"h3"}>{repo.name}</p>
+                    <p className="h3 mr-3">{repo.name}</p>
                     <Button
                       size="lg"
                       appearance={"subtle"}
