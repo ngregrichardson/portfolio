@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Panel, PanelGroup, Pagination, Icon, Button } from "rsuite";
+import {
+  Panel,
+  PanelGroup,
+  Pagination,
+  Icon,
+  IconButton,
+  Loader,
+} from "rsuite";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "react-responsive/src";
 import classNames from "classnames";
@@ -9,6 +16,7 @@ const reposPerPage = 7;
 
 function Projects() {
   const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const reposRef = useRef(repos);
   const currentPageRef = useRef(currentPage);
@@ -19,7 +27,7 @@ function Projects() {
     currentPageRef.current = currentPage;
   });
 
-  let getRepositories = (page = 1) => {
+  let getRepositories = () => {
     fetch(`${baseUrl}users/ngregrichardson/repos`)
       .then((result) => result.json())
       .then((result) =>
@@ -29,7 +37,8 @@ function Projects() {
           )
         )
       )
-      .catch((e) => console.log(e));
+      .catch((e) => console.log(e))
+      .finally(() => setLoading(false));
   };
 
   let _handlePageChange = (e) => {
@@ -54,9 +63,37 @@ function Projects() {
       document.removeEventListener("keydown", _handlePageChange, false);
   }, []);
 
+  if (loading) {
+    return <Loader size={"lg"} className={"loader"} />;
+  }
+
   const indexOfLastRepo = currentPage * reposPerPage;
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
+
+  if (currentRepos.length <= 0) {
+    return (
+      <PanelGroup
+        className={classNames(
+          "flex h-100 w-100 d-flex flex-column align-items-center justify-content-center"
+        )}
+      >
+        <h2 className="mx-3 text-center">
+          There was a problem loading the projects
+        </h2>
+        <IconButton
+          appearance={"subtle"}
+          href={`https://github.com/ngregrichardson`}
+          target={"_blank"}
+          rel="noreferrer noopener"
+          style={{ marginTop: 15 }}
+          icon={<Icon icon="github" size="lg" />}
+        >
+          View My GitHub
+        </IconButton>
+      </PanelGroup>
+    );
+  }
 
   return (
     <AnimatePresence>
@@ -86,47 +123,58 @@ function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
               >
-                {repo.homepage && repo.homepage.trim() !== "" ? (
-                  <div className="d-flex flex-row align-items-center mb-1">
-                    <a
+                <div
+                  className={
+                    isTabletOrMobile
+                      ? "d-flex flex-column mb-2 align-items-start"
+                      : "d-flex flex-row mb-2 align-items-center"
+                  }
+                >
+                  <p className="h3">{repo.name.replace(/-/g, " ")}</p>
+                  {repo.homepage && repo.homepage.trim() !== "" && (
+                    <IconButton
+                      appearance={"subtle"}
                       href={repo.homepage}
                       target={"_blank"}
                       rel="noreferrer noopener"
-                      className="h3 text-white text-decoration-underline mr-3"
+                      style={
+                        isTabletOrMobile
+                          ? {}
+                          : { marginLeft: 10, marginRight: 10 }
+                      }
+                      icon={<Icon icon="globe2" size="lg" />}
                     >
-                      {repo.name}
-                    </a>
-                    <Button
-                      size="lg"
-                      appearance={"subtle"}
-                      href={`https://github.com/ngregrichardson/${repo.name}`}
-                      target={"_blank"}
-                      rel="noreferrer noopener"
-                    >
-                      <Icon icon="github" size="lg" />
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="d-flex flex-row align-items-center">
-                    <p className="h3 mr-3">{repo.name}</p>
-                    <Button
-                      size="lg"
-                      appearance={"subtle"}
-                      href={`https://github.com/ngregrichardson/${repo.name}`}
-                      target={"_blank"}
-                      rel="noreferrer noopener"
-                    >
-                      <Icon icon="github" size="lg" />
-                    </Button>
-                  </div>
-                )}
+                      Live Demo
+                    </IconButton>
+                  )}
+                  <IconButton
+                    appearance={"subtle"}
+                    href={`https://github.com/ngregrichardson/${repo.name}`}
+                    target={"_blank"}
+                    rel="noreferrer noopener"
+                    style={
+                      isTabletOrMobile
+                        ? {}
+                        : { marginLeft: 10, marginRight: 10 }
+                    }
+                    icon={<Icon icon="github" size="lg" />}
+                  >
+                    Source Code
+                  </IconButton>
+                </div>
                 <p>{repo.description}</p>
               </motion.div>
             </Panel>
           ))}
         </Scrollbars>
       </PanelGroup>
-      <div className="w-100 d-flex align-items-end mb-5 justify-content-center">
+      <div
+        className={
+          isTabletOrMobile
+            ? "w-100 d-flex align-items-end mb-1 justify-content-center"
+            : "w-100 d-flex align-items-end mb-5 justify-content-center"
+        }
+      >
         <Pagination
           pages={Math.ceil(repos.length / reposPerPage)}
           activePage={currentPage}

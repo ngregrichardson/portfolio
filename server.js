@@ -1,39 +1,43 @@
-require('dotenv').config();
-const express = require('express');
-const nodemailer = require('nodemailer');
-const path = require('path');
+require("dotenv").config();
+const express = require("express");
+const nodemailer = require("nodemailer");
+const path = require("path");
 const PORT = process.env.PORT;
 
 const server = express();
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: false }));
-server.use(express.static(path.join(__dirname, 'public')));
-server.use(express.static(path.join(__dirname, 'client/build')));
+server.use(express.static(path.join(__dirname, "public")));
+server.use(express.static(path.join(__dirname, "client/build")));
 
-server.get("*", (req, res) =>
-    res.sendFile(path.join(__dirname, "client/build", "index.html"))
+server.get("/resume*", (req, res) =>
+  res.sendFile(path.join(__dirname, "client/build", "resume.pdf"))
 );
 
-server.post('/submit', (req, res) => {
-    let { name, email, contactReason, message } = req.body;
-    let transporter = nodemailer.createTransport({
-        host: "smtp.ionos.com",
-        port: 587,
-        secure: false,
-        auth: {
-            user: "contact@nrdesign.xyz",
-            pass: process.env.EMAIL_PASSWORD
-        }
-    });
+server.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "client/build", "index.html"))
+);
 
-    transporter
-        .sendMail({
-            from: "contact@nrdesign.xyz",
-            to: "contact@nrdesign.xyz",
-            subject: `${name} contacted you on nrdesign.xyz`,
-            text: "",
-            html: `<div style="width: 90%; margin: 0 auto; background-color: black; text-align: center; color: white; border-radius: 3px;">
+server.post("/submit", (req, res) => {
+  let { name, email, contactReason, message } = req.body;
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ionos.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "contact@nrdesign.xyz",
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
+  transporter
+    .sendMail({
+      from: "contact@nrdesign.xyz",
+      to: "contact@nrdesign.xyz",
+      subject: `${name} contacted you on nrdesign.xyz`,
+      text: "",
+      html: `<div style="width: 90%; margin: 0 auto; background-color: black; text-align: center; color: white; border-radius: 3px;">
       <h1>Contact from nrdesign.xyz</h1>
       </div>
       <table style="width: 100%; padding-left: 5%;">
@@ -64,19 +68,19 @@ server.post('/submit', (req, res) => {
       </td>
       </tr>
       </tbody>
-      </table>`
-        })
-        .then(info =>
-            res.json({ status: 200, message: "Thanks for your message!" })
-        )
-        .catch(err => {
-            console.log(err);
-            res.json({
-                status: 500,
-                message:
-                    "There was a problem sending your email. Please contact me at contact@nrdesign.xyz and I'll get back to you!"
-            });
-        });
+      </table>`,
+    })
+    .then((info) =>
+      res.json({ status: 200, message: "Thanks for your message!" })
+    )
+    .catch((err) => {
+      console.log(err);
+      res.json({
+        status: 500,
+        message:
+          "There was a problem sending your email. Please contact me at contact@nrdesign.xyz and I'll get back to you!",
+      });
+    });
 });
 
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));

@@ -11,87 +11,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0ac3efb-ab4a-4177-a758-51af0c1df5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/precache-manifest.5d34d73c45f0b19c8c9513f1b51ffc16.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.2530eee4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/build/static/js/runtime-main.2530eee4.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/android-chrome-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/android-chrome-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/browserconfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/favicon-16x16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/mstile-150x150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/safari-pinned-tab.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/site.webmanifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes/nomatch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes/projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nrdesign.xyz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nrdesign.xyz.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/resume.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.5d34d73c45f0b19c8c9513f1b51ffc16.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/nomatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/nomatch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +69,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/routes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,12 +78,38 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/client/node_modules/prettier" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client" />
+      <recent name="$PROJECT_DIR$/client/src/routes" />
       <recent name="$PROJECT_DIR$/client/public" />
+      <recent name="$PROJECT_DIR$/client" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -150,6 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587171348320</updated>
       <workItem from="1587171350769" duration="8037000" />
+      <workItem from="1593273999211" duration="8340000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Update website entirely">
       <created>1587182162120</created>
@@ -174,12 +147,41 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Update website entirely" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: Update website entirely" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2338" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593275468119">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275468119" />
+    <state x="2613" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593288859470">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2613" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593288859470" />
+    <state width="1896" height="268" key="GridCell.Tab.0.bottom" timestamp="1593275604577">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1896" height="268" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
+    <state width="1896" height="268" key="GridCell.Tab.0.center" timestamp="1593275604577">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1896" height="268" key="GridCell.Tab.0.center/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
+    <state width="1896" height="268" key="GridCell.Tab.0.left" timestamp="1593275604576">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1896" height="268" key="GridCell.Tab.0.left/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604576" />
+    <state width="1896" height="268" key="GridCell.Tab.0.right" timestamp="1593275604577">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1896" height="268" key="GridCell.Tab.0.right/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
+    <state x="2354" y="187" key="SettingsEditor" timestamp="1593275803778">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2354" y="187" key="SettingsEditor/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275803778" />
     <state x="2475" y="270" width="800" height="565" key="Vcs.Push.Dialog.v2" timestamp="1587182190498">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   Form,
   FormGroup,
@@ -9,6 +9,7 @@ import {
   Button,
   SelectPicker,
   Alert,
+  Schema,
 } from "rsuite";
 import { motion } from "framer-motion";
 
@@ -19,41 +20,45 @@ const feedbackType = [
   { label: "Request", value: "Request" },
 ];
 
+const contactModel = Schema.Model({
+  email: Schema.Types.StringType()
+    .isEmail("Invalid email")
+    .isRequired("This field is required"),
+  name: Schema.Types.StringType().isRequired("This field is required"),
+});
+
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contactReason, setContactReason] = useState("");
   const [message, setMessage] = useState("");
+  const contactFormRef = useRef();
 
   let handleSubmit = () => {
-    if (name.trim() === "") {
-      return Alert.error("The name field is required.");
-    }
-    if (email.trim() === "") {
-      return Alert.error("The email field is required.");
-    }
-    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-      return Alert.error("A valid email is required.");
-    }
-    if (contactReason.trim() === "") {
-      return Alert.error("A contact reason is required.");
-    }
-    fetch("/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, contactReason, message }),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setName('');
-        setEmail('');
-        setContactReason('');
-        setMessage('');
-        Alert.success(res.message);
+    if (contactFormRef.current.check()) {
+      fetch("/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          contactReason:
+            contactReason.trim() === "" ? "Feedback" : contactReason.trim(),
+          message,
+        }),
       })
-      .catch((e) => Alert.error(e.message));
+        .then((res) => res.json())
+        .then((res) => {
+          setName("");
+          setEmail("");
+          setContactReason("");
+          setMessage("");
+          Alert.success(res.message);
+        })
+        .catch((e) => Alert.error(e.message));
+    }
   };
 
   return (
@@ -66,15 +71,20 @@ function Contact() {
         style={{ backgroundColor: "rgba(164, 169, 179, 0.1)" }}
       >
         <h3 className="mb-3">Contact Me</h3>
-        <Form>
+        <Form ref={contactFormRef} model={contactModel}>
           <FormGroup>
-            <ControlLabel>Name</ControlLabel>
+            <ControlLabel>Name *</ControlLabel>
             <FormControl name="name" value={name} onChange={setName} />
             <HelpBlock tooltip>Required</HelpBlock>
           </FormGroup>
           <FormGroup>
-            <ControlLabel>Email</ControlLabel>
-            <FormControl name="email" type="email" value={email} onChange={setEmail} />
+            <ControlLabel>Email *</ControlLabel>
+            <FormControl
+              name="email"
+              type="email"
+              value={email}
+              onChange={setEmail}
+            />
             <HelpBlock tooltip>Required</HelpBlock>
           </FormGroup>
           <FormGroup>
@@ -86,7 +96,6 @@ function Contact() {
               value={contactReason}
               onChange={(reason) => setContactReason(reason || "")}
             />
-            <HelpBlock tooltip>Required</HelpBlock>
           </FormGroup>
           <FormGroup>
             <ControlLabel>Message</ControlLabel>

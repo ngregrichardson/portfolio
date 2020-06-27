@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Divider, Icon, Nav, Navbar } from "rsuite";
+import { Button, Icon, Nav, Navbar } from "rsuite";
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,16 +22,13 @@ function NavBar(props) {
       <Navbar {...props}>
         <Navbar.Header className="d-flex">
           <NavLink to={"/"} exact className="d-flex">
-            <div className="navbar-brand logo align-self-center ml-3">
+            <span className="navbar-brand logo align-self-center ml-3 text-decoration-none">
               ngregrichardson
-            </div>
+            </span>
           </NavLink>
         </Navbar.Header>
         <Navbar.Body>
           <Nav>
-            <NavLink to={"/"} exact>
-              <Nav.Item>Home</Nav.Item>
-            </NavLink>
             <NavLink to={"/projects"}>
               <Nav.Item>Projects</Nav.Item>
             </NavLink>

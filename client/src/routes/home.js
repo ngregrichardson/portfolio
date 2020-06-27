@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button, Divider, Popover, Whisper } from "rsuite";
 import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "react-responsive/src";
 import StarfieldAnimation from "react-starfield-animation";
 
 const fastSpeaker = (
@@ -67,9 +68,12 @@ const accessibleSpeaker = (
   </Popover>
 );
 function Home() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
     <>
-      <StarfieldAnimation className="position-absolute w-100 h-100 starfield" />
+      {!isTabletOrMobile && (
+        <StarfieldAnimation className="position-absolute w-100 h-100 starfield" />
+      )}
       <div className="w-100 flex d-flex flex-column align-items-center justify-content-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -107,11 +111,19 @@ function Home() {
         <motion.div
           style={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
         >
-          <NavLink to={"/projects"}>
+          <NavLink to={"/projects"} style={{ marginRight: 5 }}>
             <Button size={"lg"}>See my work</Button>
           </NavLink>
+          <Button
+            target={"_blank"}
+            href={"/resume"}
+            size={"lg"}
+            style={{ marginLeft: 5 }}
+          >
+            See my resume
+          </Button>
         </motion.div>
       </div>
     </>
