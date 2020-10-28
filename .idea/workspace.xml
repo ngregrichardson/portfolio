@@ -11,18 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0ac3efb-ab4a-4177-a758-51af0c1df5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/shadersBackground.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.02205e534196972a15211a8863688259.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.271b8f2d.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.271b8f2d.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.7c673c9a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.7c673c9a.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.7c673c9a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.3113aa59.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.3113aa59.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/shadersBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/shadersBackground.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1agy5W7ErrO0JIkwTTe1qgt7GNA" />
@@ -115,7 +117,7 @@
       <updated>1587171348320</updated>
       <workItem from="1587171350769" duration="8037000" />
       <workItem from="1593273999211" duration="9182000" />
-      <workItem from="1603848833420" duration="5436000" />
+      <workItem from="1603848833420" duration="5987000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Update website entirely">
       <created>1587182162120</created>
@@ -131,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593292488517</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: Replace particle system with shaders">
+      <created>1603854584182</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603854584182</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Update website entirely" />
     <MESSAGE value="feat: Add resume.pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add resume.pdf" />
+    <MESSAGE value="feat: Replace particle system with shaders" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Replace particle system with shaders" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1897" height="268" key="GridCell.Tab.0.bottom" timestamp="1603849388633">
@@ -175,5 +185,9 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="449" y="187" key="SettingsEditor/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603850504195" />
+    <state x="555" y="284" width="800" height="536" key="Vcs.Push.Dialog.v2" timestamp="1603854585209">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="555" y="284" width="800" height="536" key="Vcs.Push.Dialog.v2/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603854585209" />
   </component>
 </project>

@@ -16,7 +16,7 @@ const shaders = Shaders.create({
               for (int i=0; i<3; i++) {
                 vec4 c = colors[i];
                 vec2 p = particles[i];
-                float d = c.a * smoothstep(0.6, 0.2, distance(p, uv));
+                float d = c.a * smoothstep(1.0, 0.2, distance(p, uv));
                 sum += d * vec4(c.a * c.rgb, c.a);
               }
               if (sum.a > 1.0) {
@@ -32,9 +32,10 @@ const ShadersBackground = () => {
   const [time, setTime] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       setTime((curr) => curr + 5);
     }, 5);
+    return () => clearInterval(interval);
   }, []);
 
   return (
