@@ -11,33 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0ac3efb-ab4a-4177-a758-51af0c1df5bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/resume.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/bin_www.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/shadersBackground.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/precache-manifest.5d34d73c45f0b19c8c9513f1b51ffc16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/2.d5b77e06.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/css/main.db999807.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/2.935a651f.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/build/static/js/main.8ed60666.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/nomatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/nomatch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes/projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +53,25 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="13.12.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="10.17.43" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/routes" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/client/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -111,6 +102,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -122,7 +114,8 @@
       <option name="presentableId" value="Default" />
       <updated>1587171348320</updated>
       <workItem from="1587171350769" duration="8037000" />
-      <workItem from="1593273999211" duration="8340000" />
+      <workItem from="1593273999211" duration="9182000" />
+      <workItem from="1603848833420" duration="5436000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Update website entirely">
       <created>1587182162120</created>
@@ -131,11 +124,18 @@
       <option name="project" value="LOCAL" />
       <updated>1587182162120</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Add resume.pdf">
+      <created>1593292488517</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593292488517</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -151,44 +151,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Update website entirely" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update website entirely" />
+    <MESSAGE value="feat: Add resume.pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add resume.pdf" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2338" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593275468119">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1897" height="268" key="GridCell.Tab.0.bottom" timestamp="1603849388633">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="2338" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275468119" />
-    <state x="2613" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593288859470">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1897" height="268" key="GridCell.Tab.0.bottom/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603849388633" />
+    <state width="1897" height="268" key="GridCell.Tab.0.center" timestamp="1603849388633">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="2613" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593288859470" />
-    <state width="1896" height="268" key="GridCell.Tab.0.bottom" timestamp="1593275604577">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1897" height="268" key="GridCell.Tab.0.center/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603849388633" />
+    <state width="1897" height="268" key="GridCell.Tab.0.left" timestamp="1603849388633">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1896" height="268" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
-    <state width="1896" height="268" key="GridCell.Tab.0.center" timestamp="1593275604577">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1897" height="268" key="GridCell.Tab.0.left/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603849388633" />
+    <state width="1897" height="268" key="GridCell.Tab.0.right" timestamp="1603849388633">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1896" height="268" key="GridCell.Tab.0.center/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
-    <state width="1896" height="268" key="GridCell.Tab.0.left" timestamp="1593275604576">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state width="1897" height="268" key="GridCell.Tab.0.right/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603849388633" />
+    <state x="449" y="187" key="SettingsEditor" timestamp="1603850504195">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1896" height="268" key="GridCell.Tab.0.left/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604576" />
-    <state width="1896" height="268" key="GridCell.Tab.0.right" timestamp="1593275604577">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1896" height="268" key="GridCell.Tab.0.right/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275604577" />
-    <state x="2354" y="187" key="SettingsEditor" timestamp="1593275803778">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2354" y="187" key="SettingsEditor/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1593275803778" />
-    <state x="2475" y="270" width="800" height="565" key="Vcs.Push.Dialog.v2" timestamp="1587182190498">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2475" y="270" width="800" height="565" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1587182190498" />
-    <state x="2544" y="253" key="run.anything.popup" timestamp="1587181108066">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2544" y="253" key="run.anything.popup/1920.0.1920.1080/0.25.1920.1055/3840.0.1920.1080@1920.0.1920.1080" timestamp="1587181108066" />
+    <state x="449" y="187" key="SettingsEditor/0.25.1920.1055/1920.0.1920.1080@0.25.1920.1055" timestamp="1603850504195" />
   </component>
 </project>
