@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "portfolio",
       script: "yarn",
-      args: "deploy",
+      args: "serve",
       interpreter: "/bin/bash",
     },
   ],
