@@ -14,10 +14,13 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install dependencies
+        shell: bash
         run: yarn install
         
       - name: Build
+        shell: bash
         run: yarn build
 
       - name: Restart PM2
+        shell: bash
         run: pm2 startOrRestart ecosystem.config.js
