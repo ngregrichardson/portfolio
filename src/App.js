@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useColorMode } from "@chakra-ui/react";
+import { useEffect } from "react";
+import Footer from "./components/footer";
+import Navbar from "./components/navbar";
+import ThemeToggle from "./components/themeToggle";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Resume from "./pages/Resume";
 
-function App() {
+const App = () => {
+  const { colorMode } = useColorMode();
+
+  useEffect(() => {
+    document.body.style.backgroundColor =
+      colorMode === "light" ? "#ffffff" : "#000000";
+  }, [colorMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <ThemeToggle />
+      <Home />
+      <Projects />
+      <Resume />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
