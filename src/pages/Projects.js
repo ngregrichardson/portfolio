@@ -2,14 +2,15 @@ import {
   Button,
   Divider,
   Flex,
-  Heading,
   IconButton,
   Spinner,
   Stack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/all";
 import Project from "../components/project";
+import Section from "../components/section";
 
 const baseUrl = "https://api.github.com/";
 const reposPerPage = 5;
@@ -18,6 +19,8 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const shouldScrollToList = useBreakpointValue({ base: true, md: false });
+  const titleRef = useRef();
 
   const getRepositories = () => {
     fetch(`${baseUrl}users/ngregrichardson/repos`)
@@ -36,6 +39,9 @@ const Projects = () => {
   const incrementPage = () => {
     setCurrentPage((curr) => {
       if (curr + 1 <= Math.ceil(repos.length / reposPerPage)) {
+        if (shouldScrollToList) {
+          titleRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
         return curr + 1;
       }
       return curr;
@@ -45,6 +51,9 @@ const Projects = () => {
   const decrementPage = () => {
     setCurrentPage((curr) => {
       if (curr - 1 >= 1) {
+        if (shouldScrollToList) {
+          titleRef.current?.scrollIntoView({ behavior: "smooth" });
+        }
         return curr - 1;
       }
       return curr;
@@ -67,15 +76,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <Flex
-      width={"100vw"}
-      minHeight={"100vh"}
-      direction={"column"}
-      alignItems={"center"}
-      position={"relative"}
-      paddingY={"50px"}
-    >
-      <Heading>My Work</Heading>
+    <Section titleRef={titleRef} title={"My Work"}>
       {loading ? (
         <Flex alignItems={"center"} justifyContent={"center"} flex={1}>
           <Spinner boxSize={"75px"} />
@@ -86,7 +87,7 @@ const Projects = () => {
             as={Flex}
             flex={1}
             direction={"column"}
-            width={"50%"}
+            width={{ base: "95%", md: "75%", lg: "65%", xl: "50%" }}
             divider={<Divider borderColor={"black.500"} />}
             marginY={"50px"}
           >
@@ -102,8 +103,9 @@ const Projects = () => {
           <Stack
             as={Flex}
             direction={"row"}
-            width={"50%"}
+            width={{ base: "95%", md: "75%", lg: "65%", xl: "50%" }}
             justifyContent={"center"}
+            alignItems={"center"}
           >
             <IconButton
               aria-label={"Go to previous page of projects"}
@@ -112,7 +114,12 @@ const Projects = () => {
               onClick={decrementPage}
               size={"sm"}
             />
-            <Stack as={Flex} direction={"row"}>
+            <Stack
+              as={Flex}
+              direction={"row"}
+              wrap={"wrap"}
+              justifyContent={"center"}
+            >
               {generatePaginationArray(
                 Math.ceil(repos.length / reposPerPage)
               ).map((ignored, i) => (
@@ -137,7 +144,7 @@ const Projects = () => {
           </Stack>
         </>
       )}
-    </Flex>
+    </Section>
   );
 };
 

@@ -15,10 +15,18 @@ const Home = () => {
         flexDirection={"column"}
         alignItems={"center"}
         justifyContent={"center"}
+        paddingX={{ base: "15px", md: "30px" }}
       >
-        <Heading size={"3xl"}>Hi, I'm Noah</Heading>
-        <Heading marginTop={"15px"} color={"white.400"} size={"lg"}>
-          I build software.
+        <Heading size={"3xl"} textAlign={"center"}>
+          Hi, I'm Noah
+        </Heading>
+        <Heading
+          marginTop={"15px"}
+          color={"white.400"}
+          size={"lg"}
+          textAlign={"center"}
+        >
+          I build software
         </Heading>
       </Flex>
       <Flex direction={"column"} alignItems={"center"} paddingBottom={"30px"}>

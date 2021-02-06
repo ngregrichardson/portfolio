@@ -2,9 +2,8 @@ module.exports = {
   apps: [
     {
       name: "portfolio",
-      script: "yarn",
-      args: "serve",
-      interpreter: "/bin/bash",
+      script: "npm",
+      args: "run serve",
     },
   ],
 };

@@ -4,17 +4,25 @@ import {
   IconButton,
   Link,
   useColorMode,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { FiExternalLink } from "react-icons/all";
 import { Document, Page } from "react-pdf";
 
 const Resume = () => {
   const { colorMode } = useColorMode();
+  const documentScale = useBreakpointValue({
+    base: 0.3,
+    xs: 0.5,
+    sm: 0.7,
+    md: 0.8,
+    lg: 1,
+  });
 
   return (
     <Flex
-      width={"100vw"}
-      minHeight={"100vh"}
+      width={"100%"}
+      minHeight={{ base: undefined, md: "100vh" }}
       direction={"column"}
       alignItems={"center"}
       position={"relative"}
@@ -28,7 +36,7 @@ const Resume = () => {
         position={"relative"}
       >
         <Document file={"/resume.pdf"}>
-          <Page pageNumber={1} />
+          <Page pageNumber={1} scale={documentScale} />
         </Document>
         <IconButton
           as={Link}

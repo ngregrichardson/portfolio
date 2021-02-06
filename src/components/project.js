@@ -3,7 +3,12 @@ import { FiGithub, FiGlobe } from "react-icons/all";
 
 const Project = ({ project }) => (
   <Stack as={Flex} direction={"column"} padding={"15px"}>
-    <Stack as={Flex} spacing={"15px"} direction={"row"} alignItems={"center"}>
+    <Stack
+      as={Flex}
+      spacing={"15px"}
+      direction={{ base: "column", md: "row" }}
+      alignItems={"center"}
+    >
       <Heading size={"lg"}>{project?.name}</Heading>
       {project?.homepage ? (
         <Button
@@ -28,7 +33,9 @@ const Project = ({ project }) => (
         </Button>
       ) : null}
     </Stack>
-    <Text paddingTop={"10px"}>{project?.description}</Text>
+    <Text paddingTop={"10px"} textAlign={{ base: "center", md: "left" }}>
+      {project?.description}
+    </Text>
   </Stack>
 );
 
