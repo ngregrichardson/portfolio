@@ -27,9 +27,7 @@ const Projects = () => {
       .then((result) => result.json())
       .then((result) =>
         setRepos(
-          result.filter(
-            (repo) => !repo.fork && !repo.archived && repo.description !== null
-          )
+          result.filter((repo) => !repo.fork && repo.description !== null)
         )
       )
       .catch((e) => console.log(e))

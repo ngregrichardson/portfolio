@@ -1,4 +1,12 @@
-import { Button, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Link,
+  Stack,
+  Text,
+  Tag,
+} from "@chakra-ui/react";
 import { FiGithub, FiGlobe } from "react-icons/all";
 
 const Project = ({ project }) => (
@@ -10,6 +18,7 @@ const Project = ({ project }) => (
       alignItems={"center"}
     >
       <Heading size={"lg"}>{project?.name}</Heading>
+      {project?.archived ? <Tag>Archived</Tag> : null}
       {project?.homepage ? (
         <Button
           as={Link}
