@@ -27,7 +27,12 @@ const Projects = () => {
       .then((result) => result.json())
       .then((result) =>
         setRepos(
-          result.filter((repo) => !repo.fork && repo.description !== null)
+          result
+            .filter((repo) => !repo.fork && repo.description !== null)
+            .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+            .sort((a, b) =>
+              a.archived === b.archived ? 0 : b.archived ? -1 : 1
+            )
         )
       )
       .catch((e) => console.log(e))
