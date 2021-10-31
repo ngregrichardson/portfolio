@@ -5,4 +5,5 @@ COPY yarn.lock ./
 RUN yarn install
 COPY . ./
 EXPOSE 3000
-CMD yarn build && yarn serve
+RUN yarn build
+RUN yarn serve

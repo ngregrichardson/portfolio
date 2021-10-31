@@ -88,7 +88,6 @@ const Projects = () => {
         <>
           <Stack
             as={Flex}
-            flex={1}
             direction={"column"}
             width={{ base: "95%", md: "75%", lg: "65%", xl: "50%" }}
             divider={<Divider borderColor={"black.500"} />}
