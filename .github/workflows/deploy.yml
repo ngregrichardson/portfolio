@@ -13,7 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build Docker
+      - name: Stop Docker
+        run: docker stop portfolio
+        continue-on-error: true
+      - name: Build Docker Image
         run: docker build -t portfolio .
-      - name: Run Docker
-        run: docker run -d -p 3000:3000 portfolio
+      - name: Start Docker
+        run: docker run -d -p 3000:3000 --name portfolio portfolio
