@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Stop Docker
-        run: docker stop portfolio
+        run: |
+          docker stop portfolio
+          docker rm portfolio
         continue-on-error: true
       - name: Build Docker Image
         run: docker build -t portfolio .
