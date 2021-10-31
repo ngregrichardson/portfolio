@@ -13,9 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: See who I am
-        run: whoami
-
       - name: Build Docker
         uses: docker/build-push-action@v2.7.0
         with:
