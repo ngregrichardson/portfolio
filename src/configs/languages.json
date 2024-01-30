@@ -1,0 +1,27 @@
+[
+	{
+		"name": "TypeScript",
+		"imageUrl": "/images/languages/typescript.webp",
+		"color": "#2d79c7"
+	},
+	{
+		"name": "Go",
+		"imageUrl": "/images/languages/go.webp",
+		"color": "#00aed9"
+	},
+	{
+		"name": "Java",
+		"imageUrl": "/images/languages/java.webp",
+		"color": "#e76f00"
+	},
+	{
+		"name": "Python",
+		"imageUrl": "/images/languages/python.webp",
+		"color": "#ffe161"
+	},
+	{
+		"name": "Lua",
+		"imageUrl": "/images/languages/lua.webp",
+		"color": "#000081"
+	}
+]

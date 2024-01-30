@@ -1,0 +1,22 @@
+[
+	{
+		"name": "Git",
+		"imageUrl": "/images/tools/git.webp",
+		"color": "#f05033"
+	},
+	{
+		"name": "Docker",
+		"imageUrl": "/images/tools/docker.webp",
+		"color": "#2296ee"
+	},
+	{
+		"name": "PostgreSQL",
+		"imageUrl": "/images/tools/postgres.webp",
+		"color": "#2f6792"
+	},
+	{
+		"name": "Microsoft SQL Server",
+		"imageUrl": "/images/tools/mssql.webp",
+		"color": "#cf2826"
+	}
+]

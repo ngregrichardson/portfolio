@@ -1,0 +1,50 @@
+[
+	{
+		"name": "React",
+		"imageUrl": "/images/frameworks/react.webp"
+	},
+	{
+		"name": "Svelte",
+		"imageUrl": "/images/frameworks/svelte.webp"
+	},
+	{
+		"name": "NestJS",
+		"imageUrl": "/images/frameworks/nestjs.webp"
+	},
+	{
+		"name": "Next.js",
+		"imageUrl": "/images/frameworks/nextjs.svg"
+	},
+	{
+		"name": "Gin",
+		"imageUrl": "/images/frameworks/gin.webp"
+	},
+	{
+		"name": "Cobra",
+		"imageUrl": "/images/frameworks/cobra.webp"
+	},
+	{
+		"name": "Viper",
+		"imageUrl": "/images/frameworks/viper.webp"
+	},
+	{
+		"name": "Spring",
+		"imageUrl": "/images/frameworks/spring.webp"
+	},
+	{
+		"name": "Hibernate",
+		"imageUrl": "/images/frameworks/hibernate.webp"
+	},
+	{
+		"name": "Numpy",
+		"imageUrl": "/images/frameworks/numpy.webp"
+	},
+	{
+		"name": "Django",
+		"imageUrl": "/images/frameworks/django.webp"
+	},
+	{
+		"name": "Pandas",
+		"imageUrl": "/images/frameworks/pandas.webp"
+	}
+]

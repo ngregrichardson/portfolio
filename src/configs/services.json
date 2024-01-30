@@ -1,0 +1,22 @@
+[
+	{
+		"name": "AWS",
+		"imageUrl": "/images/services/aws.webp",
+		"color": "#ff9a00"
+	},
+	{
+		"name": "GCP",
+		"imageUrl": "/images/services/gcp.webp",
+		"color": "#34a853"
+	},
+	{
+		"name": "Firebase",
+		"imageUrl": "/images/services/firebase.webp",
+		"color": "#f6820c"
+	},
+	{
+		"name": "Supabase",
+		"imageUrl": "/images/services/supabase.webp",
+		"color": "#3ecf8e"
+	}
+]
