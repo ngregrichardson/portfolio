@@ -1,0 +1,75 @@
+[
+	{
+		"name": "React",
+		"imageUrl": "/images/frameworks/react.webp",
+		"color": "#61dbfb",
+		"href": "https://react.dev"
+	},
+	{
+		"name": "Svelte",
+		"imageUrl": "/images/frameworks/svelte.webp",
+		"color": "#f73b00",
+		"href": "https://svelte.dev"
+	},
+	{
+		"name": "NestJS",
+		"imageUrl": "/images/frameworks/nestjs.webp",
+		"color": "#e2224e",
+		"href": "https://nestjs.com"
+	},
+	{
+		"name": "Next.js",
+		"imageUrl": "/images/frameworks/nextjs.webp",
+		"color": "#000000",
+		"href": "https://nextjs.org",
+		"invert": true
+	},
+	{
+		"name": "Gin",
+		"imageUrl": "/images/frameworks/gin.webp",
+		"color": "#00aed9",
+		"href": "https://gin-gonic.com"
+	},
+	{
+		"name": "Cobra",
+		"imageUrl": "/images/frameworks/cobra.webp",
+		"color": "#ead268",
+		"href": "https://cobra.dev"
+	},
+	{
+		"name": "Viper",
+		"imageUrl": "/images/frameworks/viper.webp",
+		"color": "#6abe6c",
+		"href": "https://github.com/spf13/viper"
+	},
+	{
+		"name": "Spring",
+		"imageUrl": "/images/frameworks/spring.webp",
+		"color": "#72b544",
+		"href": "https://spring.io"
+	},
+	{
+		"name": "Hibernate ORM",
+		"imageUrl": "/images/frameworks/hibernate.webp",
+		"color": "#bdb17d",
+		"href": "https://hibernate.org"
+	},
+	{
+		"name": "Numpy",
+		"imageUrl": "/images/frameworks/numpy.webp",
+		"color": "#537ad2",
+		"href": "https://numpy.org"
+	},
+	{
+		"name": "Django",
+		"imageUrl": "/images/frameworks/django.webp",
+		"color": "#44b98b",
+		"href": "https://www.djangoproject.com"
+	},
+	{
+		"name": "Pandas",
+		"imageUrl": "/images/frameworks/pandas.webp",
+		"color": "#e00384",
+		"href": "https://pandas.pydata.org"
+	}
+]

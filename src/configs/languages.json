@@ -1,0 +1,44 @@
+[
+	{
+		"name": "TypeScript",
+		"imageUrl": "/images/languages/typescript.webp",
+		"color": "#2d79c7",
+		"href": "https://www.typescriptlang.org/"
+	},
+	{
+		"name": "Go",
+		"imageUrl": "/images/languages/go.webp",
+		"color": "#00aed9",
+		"href": "https://go.dev/"
+	},
+	{
+		"name": "Java",
+		"imageUrl": "/images/languages/java.webp",
+		"color": "#e76f00",
+		"href": "https://www.java.com/"
+	},
+	{
+		"name": "Python",
+		"imageUrl": "/images/languages/python.webp",
+		"color": "#ffe161",
+		"href": "https://www.python.org/"
+	},
+	{
+		"name": "Lua",
+		"imageUrl": "/images/languages/lua.webp",
+		"color": "#000081",
+		"href": "https://www.lua.org/"
+	},
+	{
+		"name": "Rust",
+		"imageUrl": "/images/languages/rust.webp",
+		"color": "#8f4b26",
+		"href": "https://www.rust-lang.org/"
+	},
+	{
+		"name": "C#",
+		"imageUrl": "/images/languages/csharp.webp",
+		"color": "#3a0092",
+		"href": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+	}
+]
