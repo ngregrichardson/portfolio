@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portfolio
+    restart: always
+    environment:
+      - INFISICAL_TOKEN
