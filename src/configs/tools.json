@@ -2,21 +2,44 @@
 	{
 		"name": "Git",
 		"imageUrl": "/images/tools/git.webp",
-		"color": "#f05033"
+		"color": "#f05033",
+		"href": "https://git-scm.com/"
 	},
 	{
 		"name": "Docker",
 		"imageUrl": "/images/tools/docker.webp",
-		"color": "#2296ee"
+		"color": "#2296ee",
+		"href": "https://www.docker.com/"
 	},
 	{
 		"name": "PostgreSQL",
 		"imageUrl": "/images/tools/postgres.webp",
-		"color": "#2f6792"
+		"color": "#2f6792",
+		"href": "https://www.postgresql.org/"
 	},
 	{
 		"name": "Microsoft SQL Server",
 		"imageUrl": "/images/tools/mssql.webp",
-		"color": "#cf2826"
+		"color": "#cf2826",
+		"href": "https://www.microsoft.com/en-us/sql-server"
+	},
+	{
+		"name": "GitHub",
+		"imageUrl": "/images/tools/github.webp",
+		"color": "#000000",
+		"href": "https://github.com/",
+		"invert": true
+	},
+	{
+		"name": "Bun",
+		"imageUrl": "/images/tools/bun.webp",
+		"color": "#f473b6",
+		"href": "https://bun.sh/"
+	},
+	{
+		"name": "Node.js",
+		"imageUrl": "/images/tools/nodejs.webp",
+		"color": "#519f41",
+		"href": "https://nodejs.org/"
 	}
 ]

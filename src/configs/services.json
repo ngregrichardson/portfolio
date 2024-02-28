@@ -2,21 +2,32 @@
 	{
 		"name": "AWS",
 		"imageUrl": "/images/services/aws.webp",
-		"color": "#ff9a00"
+		"color": "#ff9a00",
+		"href": "https://aws.amazon.com/"
 	},
 	{
-		"name": "GCP",
+		"name": "Google Cloud Platform",
 		"imageUrl": "/images/services/gcp.webp",
-		"color": "#34a853"
+		"color": "#34a853",
+		"href": "https://cloud.google.com/"
 	},
 	{
 		"name": "Firebase",
 		"imageUrl": "/images/services/firebase.webp",
-		"color": "#f6820c"
+		"color": "#f6820c",
+		"href": "https://firebase.google.com/"
 	},
 	{
 		"name": "Supabase",
 		"imageUrl": "/images/services/supabase.webp",
-		"color": "#3ecf8e"
+		"color": "#3ecf8e",
+		"href": "https://supabase.com/"
+	},
+	{
+		"name": "OpenAI",
+		"imageUrl": "/images/services/openai.webp",
+		"color": "#000000",
+		"href": "https://openai.com/",
+		"invert": true
 	}
 ]
