@@ -13,3 +13,5 @@ services:
     labels:
       traefik.http.routers.portfolio.rule: Host(`iamnoah.dev`)
       traefik.http.routers.portfolio.entrypoints: web
+    networks:
+      - traefik
