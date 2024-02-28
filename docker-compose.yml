@@ -6,5 +6,10 @@ services:
       dockerfile: Dockerfile
     image: portfolio
     restart: always
+    expose:
+      - 3000
     environment:
       - INFISICAL_TOKEN
+    labels:
+      traefik.http.routers.portfolio.rule: Host(`iamnoah.dev`)
+      traefik.http.routers.portfolio.entrypoints: web
