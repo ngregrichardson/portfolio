@@ -15,3 +15,7 @@ services:
       traefik.http.routers.portfolio.entrypoints: web
     networks:
       - traefik
+
+networks:
+  traefik:
+    external: true
