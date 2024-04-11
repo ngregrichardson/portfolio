@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/adapter-node": "^4.0.1",
+    "@sveltejs/adapter-cloudflare": "^4.2.1",
     "@sveltejs/kit": "^1.20.4",
     "@types/chance": "^1.1.6",
     "@types/luxon": "^3.3.2",
