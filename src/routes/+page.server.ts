@@ -1,10 +1,10 @@
+import { env } from '$env/dynamic/private';
 import { validateToken } from '$src/lib/cloudflare';
 import type { Actions } from '@sveltejs/kit';
-import { z } from 'zod';
-import { zfd } from 'zod-form-data';
 import { fail } from '@sveltejs/kit';
 import { Resend } from 'resend';
-import { env } from '$env/dynamic/private';
+import { z } from 'zod';
+import { zfd } from 'zod-form-data';
 
 const schema = zfd.formData({
 	name: zfd.text(z.string().min(1)),
@@ -36,7 +36,7 @@ export const actions = {
 				try {
 					const resend = new Resend(env.RESEND_KEY);
 
-					resend.emails.send({
+					await resend.emails.send({
 						from: 'contact@iamnoah.dev',
 						to: 'noah@iamnoah.dev',
 						subject: `New contact from ${result.data.name}`,
@@ -57,28 +57,28 @@ export const actions = {
 				return {
 					message: "Thanks for reaching out! I'll get back to you soon."
 				};
-			} else {
-				console.error(err);
-				return fail(498, {
-					errors: {
-						'cf-turnstile-response': {
-							value: '',
-							message: 'Invalid or failed captcha'
-						}
-					} as ErrorMessages
-				});
 			}
-		} else {
-			console.error(result.error);
-			return fail(400, {
-				errors: result.error.errors.reduce((acc, e) => {
-					acc[e.path.join('.') as keyof z.infer<typeof schema>] = {
-						value: (data.get(e.path.join('.')) as string) || '',
-						message: e.message
-					};
-					return acc;
-				}, {} as ErrorMessages)
+
+			console.error(err);
+			return fail(498, {
+				errors: {
+					'cf-turnstile-response': {
+						value: '',
+						message: 'Invalid or failed captcha'
+					}
+				} as ErrorMessages
 			});
 		}
+
+		console.error(result.error);
+		return fail(400, {
+			errors: result.error.errors.reduce((acc, e) => {
+				acc[e.path.join('.') as keyof z.infer<typeof schema>] = {
+					value: (data.get(e.path.join('.')) as string) || '',
+					message: e.message
+				};
+				return acc;
+			}, {} as ErrorMessages)
+		});
 	}
 } satisfies Actions;
