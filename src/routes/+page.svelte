@@ -1,12 +1,12 @@
 <script lang="ts">
-	import HandDrawnArrow from '$lib/icons/handDrawnArrow.svelte';
-	import { DateTime } from 'luxon';
-	import Container from '$src/lib/components/container.svelte';
-	import { Turnstile } from 'svelte-turnstile';
-	import { env } from '$env/dynamic/public';
 	import { enhance } from '$app/forms';
-	import type { ActionData } from './$types';
+	import { env } from '$env/dynamic/public';
+	import HandDrawnArrow from '$lib/icons/handDrawnArrow.svelte';
+	import Container from '$src/lib/components/container.svelte';
 	import { Loader2 } from 'lucide-svelte';
+	import { DateTime } from 'luxon';
+	import { Turnstile } from 'svelte-turnstile';
+	import type { ActionData } from './$types';
 
 	const hobbyStartDate = DateTime.fromObject({
 		day: 26,
@@ -117,7 +117,7 @@
 			alt="My workspace on Drexel's campus"
 			class="grayscale hover:transition-all hover:grayscale-0 row-start-2 row-end-2 md:row-start-1 md:row-end-1 col-start-1 col-end-4 sm:col-start-2 sm:col-end-2 md:col-start-1"
 		/>
-		<p  class="flex items-center col-start-1 col-end-4 md:col-end-4">Midway through my five year program, I decide to switch to a 4+1 program to earn my Bachelors and Masters in Computer Science in just five years. By skipping my third co-op, I was able to take graduate-level courses alongside my undergraduate courses to earn my Masters in just one year. I graduated with my Bachelors in Computer Science with concentrations in Artificial Intelligence and Software Engineering in June 2023, and my Masters in Computer Science will be awarded in June 2024.</p>
+		<p  class="flex items-center col-start-1 col-end-4 md:col-end-4">Midway through my five year program, I decided to switch to a 4+1 program to earn my Bachelors and Masters in Computer Science in just five years. By skipping my third co-op, I was able to take graduate-level courses alongside my undergraduate courses to earn my Masters in just one year. I graduated with my Bachelors in Computer Science with concentrations in Artificial Intelligence and Software Engineering in June 2023, and my Masters in Computer Science will be awarded in June 2024.</p>
 	</Container>
 	<Container title="my professional experience">
 		<p>
@@ -147,7 +147,7 @@
 	</Container>
 	<Container>
 		<p>
-			After another few months at TruckBux, I was given the opportunity to work as a Software Engineer at <a href="https://sig.com/" target="_blank">Susquehanna International Group</a> (SIG) for my second work experience. I was placed on a team that gave me my own project to work on. I was respoDuring my undergasible for the full stack development of a centralized logging system that could collect logs from any system and funnel them into a single web interface for triage and analysis. Starting mostly from scratch, I built the system with JQuery, .NET, and MS SQL Server. 
+			After another few months at TruckBux, I was given the opportunity to work as a Software Engineer at <a href="https://sig.com/" target="_blank">Susquehanna International Group</a> (SIG) for my second Drexel co-op. I was placed on a team that gave me my own project to work on. I was responsible for the full stack development of a centralized logging system that could collect logs from any system and funnel them into a single web interface for triage and analysis. Starting mostly from scratch, I built the system with JQuery, .NET, and MS SQL Server. 
 		</p>
 		<p>
 			By the end of my six months at SIG, an MVP was in production and was used by multiple other projects the team maintained. I decided to continue part-time at SIG for another six months, where I helped mentor the next co-op, continued work on the logging platform, and developed detailed documentation to migrate my team from Perforce to Git.
@@ -215,7 +215,7 @@
 					{#if form?.errors?.['cf-turnstile-response']}
 						<p class="error">{form?.errors?.['cf-turnstile-response']?.message}</p>
 					{/if}
-					<button type="submit" class="bg-accent text-white p-2 rounded-md w-fit px-8 py-2">
+					<button type="submit" class="bg-accent text-background p-2 rounded-md w-fit px-8 py-2">
 						{#if isSubmittingForm}
 							<Loader2 class="animate-spin" />
 						{:else}
