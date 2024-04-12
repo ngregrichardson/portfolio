@@ -187,7 +187,7 @@
 					update();
 				}
 			}} action="?/contact">
-				<div class="flex gap-4">
+				<div class="flex flex-col sm:flex-row gap-4">
 					<label>
 						<span>Name <span class="required">*</span></span>
 						<input type="text" name="name" class={form?.errors?.name ? '!border-2 !border-destructive' : ""} value={form?.errors?.name?.value || ''} />

@@ -52,7 +52,7 @@
 
 <div class="w-full">
 	<Container>
-		<header class="flex justify-between items-end xs:items-center gap-3">
+		<header class="flex flex-col xs:flex-row justify-between items-center gap-3">
 			<h1 id="brand" class="text-2xl font-bold">🌊hi, i'm noah</h1>
 			<div class="flex items-center gap-5">
 				{#each links as link}
@@ -70,7 +70,7 @@
 	</Container>
 	<slot />
 	<Container>
-		<footer class="flex justify-between items-end xs:items-center gap-3">
+		<footer class="flex flex-col xs:flex-row justify-between items-center gap-3">
 			<a href={'/'} class="flex items-end hover:underline" on:click={handleScrollToTop}>Back to Top</a>
 			<div class="flex items-center gap-5">
 				{#each links as link}
