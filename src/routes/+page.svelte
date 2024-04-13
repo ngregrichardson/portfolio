@@ -7,6 +7,7 @@
 	import { DateTime } from 'luxon';
 	import { Turnstile } from 'svelte-turnstile';
 	import type { ActionData } from './$types';
+	import ImageContainer from '$src/lib/components/imageContainer.svelte';
 
 	const hobbyStartDate = DateTime.fromObject({
 		day: 26,
@@ -123,27 +124,11 @@
 		<p>
 			Three months into my freshman year at Drexel, I joined a local startup TruckBux as a Full Stack Developer. TruckBux was developing a platform for food trucks to accept online orders for pickup and delivery. During my first year I rebuilt the vendor app in React Native to overhaul the UI, functionality, and improve maintainability and performance. This included changes to the Java Spring backend to support the new features and improve the user experience.
 		</p>
-		<div class="max-w-full w-full flex gap-4 space-between">
-			{#each vendorImages as imageName (imageName)}
-				<img
-					src={`/images/vendor/${imageName}.webp`}
-					alt={`A screenshot of the TruckBux vendor app showing the ${imageName} screen`}
-					class="flex-1 rounded-sm h-auto w-1/3"
-				/>
-			{/each}
-		</div>
+		<ImageContainer images={vendorImages} namespace={"vendor"} alt="A screenshot of the TruckBux vendor app showing the %s screen" caption="Screenshots of the new and improved TruckBux vendor app" />
 		<p>
 			When my first co-op started, I assumed the role of Lead Developer at the company. I kept my existing responsibilities while also leading the development team of other employees and Drexel co-ops. During this time, I rebuilt the admin panel in React and overhauled the user app in React Native as well. The changes to the user app also included a major overhaul of the backend to support Firebase authentication, improve logging and error reporting, and upgrade the UI from a legacy design. I developed over 90% of the code in the new app in under 3 months, pushing a stable production build in the first quarter of 2021.
 		</p>
-		<div class="max-w-full w-full flex gap-4 space-between">
-			{#each userImages as imageName (imageName)}
-				<img
-					src={`/images/user/${imageName}.webp`}
-					alt={`A screenshot of the TruckBux user app showing the ${imageName} screen`}
-					class="flex-1 rounded-sm h-auto w-1/2"
-				/>
-			{/each}
-		</div>
+		<ImageContainer images={userImages} namespace={"user"} alt="A screenshot of the TruckBux user app showing the %s screen" caption="Some of the first production screenshots of the rebuilt TruckBux user app" />
 	</Container>
 	<Container>
 		<p>
@@ -157,15 +142,7 @@
 		<p>
 			Since my time at SIG, I have done freelance work for multiple companies and individuals, most recently developing the NestJS backend for <a href="https://ziki.kitchen" target="_blank">ZIKI&copy;</a>, a Greek/Mexican fusion mobile kitchen chain in Austin, Texas. Built from scratch, this backend integrates with Toast, Stripe, Google Maps, and DoorDash to to provide fast and reliable mobile ordering for pickup and delivery.
 		</p>
-		<div class="max-w-full w-full flex gap-4 space-between">
-			{#each zikiImages as imageName (imageName)}
-				<img
-					src={`/images/ziki/${imageName}.webp`}
-					alt={`A screenshot of the ZIKI user app showing the ${imageName} screen`}
-					class="flex-1 rounded-sm h-auto w-1/2"
-				/>
-			{/each}
-		</div>
+		<ImageContainer images={zikiImages} namespace={"ziki"} alt="A screenshot of the ZIKI user app showing the %s screen" caption="Final designs of the ZIKI&copy; app" />
 		<p>While building the backend, the main focus was on security and reliability. To ensure high availability, I developed automated Docker deployments with GitHub actions that will automatically start updated containers, wait for them to become healthy, then take down the old containers. This allows deployment (or a failed deployment) without any disruption since Traefik helps load balance the requests between the containers. To improve the maintainability of the system, I also deployed logging and monitoring infrastructure to handle debugging and status updates. You can see some of the infrastructure <a href="https://status.ziki.kitchen/" target="_blank">here</a>.</p>
 	</Container>
 	<Container title="my resume">
