@@ -65,16 +65,17 @@
 			class="grayscale hover:transition-all hover:grayscale-0 row-start-2 row-end-2 md:row-start-1 md:row-end-1 col-start-1 col-end-4 sm:col-start-2 sm:col-end-2 md:col-start-1"
 		/>
 		<div class="flex items-center col-start-1 col-end-4 md:col-start-2 md:col-end-4">
-			<div>
+			<p>
 				I have been programming as a hobby for
-				<h6 class="standout" title="Since {hobbyStartDate.toFormat('DDD')}">
+				<b class="standout" title="Since {hobbyStartDate.toFormat('DDD')}">
 					{hobbyDiff.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} milliseconds
-				</h6>
+				</b>
 				and building professional software for
-				<h6 class="standout" title="Since {professionalStartDate.toFormat('DDD')}">
+				<b class="standout" title="Since {professionalStartDate.toFormat('DDD')}">
 					{isAlmostNext ? 'almost' : ''}
-					{professionalYears} years</h6>.
-				</div>
+					{professionalYears} years</b
+				>.
+			</p>
 		</div>
 	</Container>
 	<Container title="what i do">
@@ -99,7 +100,7 @@
 			/>
 			<div class="absolute top-[-50px] left-[38%] z-10 flex items-start">
 				<HandDrawnArrow class="fill-accent scale-x-flip  -rotate-[30deg] w-[80px] md:w-[100px]" role="presentation" />
-				<h3 class="text-accent font-handlee text-2xl md:text-3xl">that's me!</h3>
+				<span class="text-accent font-handlee text-2xl md:text-3xl">that's me!</span>
 			</div>
 		</div>
 		<p>
@@ -232,7 +233,7 @@
 		@apply text-lg;
 	}
 	.standout {
-		@apply inline font-bold cursor-help text-2xl;
+		@apply cursor-help text-2xl;
 	}
 	img {
 		@apply rounded-sm;
