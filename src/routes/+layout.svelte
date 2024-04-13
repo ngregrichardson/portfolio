@@ -51,6 +51,7 @@
 </svelte:head>
 
 <div class="w-full">
+	<a href="#main" class="absolute left-3 top-3 w-0 h-0 overflow-hidden focus:visible focus:w-fit focus:h-fit focus:p-1">Skip navigation</a>
 	<Container>
 		<header class="flex flex-col xs:flex-row justify-between items-center gap-3">
 			<h1 id="brand" class="text-2xl font-bold">🌊hi, i'm noah</h1>

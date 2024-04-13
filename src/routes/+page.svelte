@@ -57,7 +57,7 @@
 	let isSubmittingForm = false;
 </script>
 
-<main class="my-10 flex flex-col gap-10">
+<main id="main" class="my-10 flex flex-col gap-10">
 	<Container class="grid grid-cols-3 gap-5">
 		<img
 			src="./portrait.webp"
@@ -65,17 +65,16 @@
 			class="grayscale hover:transition-all hover:grayscale-0 row-start-2 row-end-2 md:row-start-1 md:row-end-1 col-start-1 col-end-4 sm:col-start-2 sm:col-end-2 md:col-start-1"
 		/>
 		<div class="flex items-center col-start-1 col-end-4 md:col-start-2 md:col-end-4">
-			<p>
+			<div>
 				I have been programming as a hobby for
-				<strong title="Since {hobbyStartDate.toFormat('DDD')}">
+				<h6 class="standout" title="Since {hobbyStartDate.toFormat('DDD')}">
 					{hobbyDiff.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} milliseconds
-				</strong>
+				</h6>
 				and building professional software for
-				<strong title="Since {professionalStartDate.toFormat('DDD')}">
+				<h6 class="standout" title="Since {professionalStartDate.toFormat('DDD')}">
 					{isAlmostNext ? 'almost' : ''}
-					{professionalYears} years</strong
-				>.
-			</p>
+					{professionalYears} years</h6>.
+				</div>
 		</div>
 	</Container>
 	<Container title="what i do">
@@ -99,8 +98,8 @@
 				class="grayscale hover:transition-all hover:grayscale-0 row-start-2 row-end-2 md:row-start-1 md:row-end-1 col-start-1 col-end-4 sm:col-start-2 sm:col-end-2 md:col-start-1"
 			/>
 			<div class="absolute top-[-50px] left-[38%] z-10 flex items-start">
-				<HandDrawnArrow class="fill-accent scale-x-flip  -rotate-[30deg] w-[80px] md:w-[100px]" />
-				<span class="text-accent font-handlee text-2xl md:text-3xl">that's me!</span>
+				<HandDrawnArrow class="fill-accent scale-x-flip  -rotate-[30deg] w-[80px] md:w-[100px]" role="presentation" />
+				<h3 class="text-accent font-handlee text-2xl md:text-3xl">that's me!</h3>
 			</div>
 		</div>
 		<p>
@@ -232,8 +231,8 @@
 	p {
 		@apply text-lg;
 	}
-	strong {
-		@apply cursor-help text-2xl;
+	.standout {
+		@apply inline font-bold cursor-help text-2xl;
 	}
 	img {
 		@apply rounded-sm;
