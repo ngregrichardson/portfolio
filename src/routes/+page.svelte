@@ -190,14 +190,14 @@
 				<div class="flex flex-col sm:flex-row gap-4">
 					<label>
 						<span>Name <span class="required">*</span></span>
-						<input type="text" name="name" class={form?.errors?.name ? '!border-2 !border-destructive' : ""} value={form?.errors?.name?.value || ''} />
+						<input type="text" name="name" aria-required="true" aria-label="name" class={form?.errors?.name ? '!border-2 !border-destructive' : ""} value={form?.errors?.name?.value || ''} />
 						{#if form?.errors?.name}
 							<p class="error">{form?.errors?.name?.message}</p>
 						{/if}
 					</label>
 					<label>
 						<span>Email <span class="required">*</span></span>
-						<input type="email" name="email" class={form?.errors?.email ? '!border-2 !border-destructive' : ""} value={form?.errors?.email?.value || ''} />
+						<input type="email" name="email" aria-required="true" aria-label="email" class={form?.errors?.email ? '!border-2 !border-destructive' : ""} value={form?.errors?.email?.value || ''} />
 						{#if form?.errors?.email}
 							<p class="error">{form?.errors?.email?.message}</p>
 						{/if}
@@ -205,7 +205,7 @@
 				</div>
 				<label>
 					<span>Message <span class="required">*</span></span>
-					<textarea name="message" class={form?.errors?.message ? '!border-2 !border-destructive' : ""} value={form?.errors?.message?.value || ''} />
+					<textarea name="message" aria-required="true" aria-label="message" class={form?.errors?.message ? '!border-2 !border-destructive' : ""} value={form?.errors?.message?.value || ''} />
 					{#if form?.errors?.message}
 						<p class="error">{form?.errors?.message?.message}</p>
 					{/if}

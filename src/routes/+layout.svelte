@@ -61,8 +61,9 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-end hover:underline"
+						aria-label="{link.name}, opens in new tab"
 					>
-						<MoveUpRight size="20px" />{link.name}
+						<MoveUpRight size="20px" role="presentation" />{link.name}
 					</a>
 				{/each}
 			</div>
@@ -79,8 +80,9 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex items-end hover:underline"
+						aria-label="{link.name}, opens in new tab"
 					>
-						<MoveUpRight size="20px" />{link.name}
+						<MoveUpRight size="20px" role="presentation" />{link.name}
 					</a>
 				{/each}
 			</div>
