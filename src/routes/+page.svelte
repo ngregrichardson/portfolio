@@ -155,7 +155,7 @@
 			<h3 class="text-3xl mt-6 font-bold text-accent text-center">{form?.message}</h3>
 		{:else}
 			<p>
-				if you're interested in the work i've done, the work i'm doing, or the work i could do for you, please get in touch! i'm always looking for new opportunities and challenges.
+				If you're interested in the work i've done, the work i'm doing, or the work i could do for you, please get in touch! i'm always looking for new opportunities and challenges.
 			</p>
 			<form method="POST" class="flex flex-col gap-4 mt-6" use:enhance={() => {
 				isSubmittingForm = true;
