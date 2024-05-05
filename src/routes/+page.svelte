@@ -147,7 +147,7 @@
 	</Container>
 	<Container title="my resume">
 		<p>
-			For a condensed version of my experience, you can <a href="https://rxresu.me/ngregrichardson/resume" target="_blank">view</a> or <a href="https://storage.rxresu.me/clp9g27awg9xw9hunkwl3h72e/resumes/clp9kzsbw09lpm3d22qwq2vtt.pdf" target="_blank">download</a> my resume.
+			For a condensed version of my experience, you can <a href="https://rxresu.me/ngregrichardson/resume" target="_blank" data-umami-event="Viewed Resume">view</a> or <a href="https://storage.rxresu.me/clp9g27awg9xw9hunkwl3h72e/resumes/clp9kzsbw09lpm3d22qwq2vtt.pdf" target="_blank" data-umami-event="Downloaded Resume">download</a> my resume.
 		</p>
 	</Container>
 	<Container title="get in touch">
