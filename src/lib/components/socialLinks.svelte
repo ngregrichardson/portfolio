@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { trackEvent } from '@aptabase/web';
 	import { MoveUpRight } from 'lucide-svelte';
 
 	const links = [
@@ -15,6 +16,10 @@
 			url: 'https://www.linkedin.com/in/ngregrichardson'
 		}
 	];
+
+	const handleViewed = (name: string) => {
+		trackEvent(`Viewed ${name}`);
+	}
 </script>
 
 <div class="flex items-center gap-5">
@@ -25,7 +30,7 @@
             rel="noopener noreferrer"
             class="flex items-end hover:underline"
             aria-label="{link.name}, opens in new tab"
-            data-umami-event="Viewed {link.name}"
+			on:click={() => handleViewed(link.name)}
         >
             <MoveUpRight size="20px" role="presentation" />{link.name}
         </a>

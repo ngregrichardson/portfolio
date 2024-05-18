@@ -4,6 +4,9 @@
 	import Skills from '$src/lib/components/skills.svelte';
 	import type { MouseEventHandler } from 'svelte/elements';
 	import SocialLinks from '$src/lib/components/socialLinks.svelte';
+	import { init, trackEvent } from '@aptabase/web';
+	import { onMount } from 'svelte';
+	import { env } from '$env/dynamic/public';
 
 	const handleScrollToTop: MouseEventHandler<HTMLAnchorElement> = (event) => {
 		event.preventDefault();
@@ -13,6 +16,16 @@
 			behavior: 'smooth'
 		});
 	}
+
+	onMount(() => {
+		if(env.PUBLIC_APTABASE_APP_KEY) {
+			init(env.PUBLIC_APTABASE_APP_KEY, {
+				host: 'https://stats.iamnoah.dev'
+			});
+
+			trackEvent('Viewed /');
+		}
+	});
 </script>
 
 <svelte:head>
