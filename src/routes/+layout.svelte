@@ -23,7 +23,9 @@
 				host: 'https://stats.iamnoah.dev'
 			});
 
-			trackEvent('Viewed /');
+			trackEvent('Viewed', {
+				path: '/'
+			});
 		}
 	});
 </script>
