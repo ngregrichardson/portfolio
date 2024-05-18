@@ -18,7 +18,7 @@
 	];
 
 	const handleViewed = (name: string) => {
-		trackEvent(`Viewed ${name}`);
+		trackEvent(`view ${name.toLowerCase()}`);
 	}
 </script>
 

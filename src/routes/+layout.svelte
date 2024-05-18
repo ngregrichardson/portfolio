@@ -23,7 +23,7 @@
 				host: 'https://stats.iamnoah.dev'
 			});
 
-			trackEvent('Viewed', {
+			trackEvent('view', {
 				path: '/'
 			});
 		}

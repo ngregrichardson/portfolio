@@ -11,7 +11,7 @@
 	import { trackEvent } from '@aptabase/web';
 
 	const handleResumeClick = (type: string) => {
-		trackEvent(`${type} Resume`);
+		trackEvent(`${type} resume`);
 	}
 
 	const hobbyStartDate = DateTime.fromObject({
@@ -152,7 +152,7 @@
 	</Container>
 	<Container title="my resume">
 		<p>
-			For a condensed version of my experience, you can <a href="https://rxresu.me/ngregrichardson/resume" target="_blank" on:click={() => handleResumeClick('Viewed')}>view</a> or <a href="https://storage.rxresu.me/clp9g27awg9xw9hunkwl3h72e/resumes/clp9kzsbw09lpm3d22qwq2vtt.pdf" target="_blank" on:click={() => handleResumeClick('Download')}>download</a> my resume.
+			For a condensed version of my experience, you can <a href="https://rxresu.me/ngregrichardson/resume" target="_blank" on:click={() => handleResumeClick('view')}>view</a> or <a href="https://storage.rxresu.me/clp9g27awg9xw9hunkwl3h72e/resumes/clp9kzsbw09lpm3d22qwq2vtt.pdf" target="_blank" on:click={() => handleResumeClick('download')}>download</a> my resume.
 		</p>
 	</Container>
 	<Container title="get in touch">
