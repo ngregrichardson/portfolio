@@ -18,7 +18,7 @@
 	}
 
 	onMount(() => {
-		if(env.PUBLIC_APTABASE_APP_KEY) {
+		if(navigator?.languages && env.PUBLIC_APTABASE_APP_KEY) {
 			init(env.PUBLIC_APTABASE_APP_KEY, {
 				host: 'https://stats.iamnoah.dev'
 			});
