@@ -116,7 +116,7 @@
 	</Container>
 	<Container title="my educational experience" class="grid grid-cols-3 gap-5">
 		<p class="flex items-center col-start-1 col-end-4 md:col-start-2 md:col-end-4">
-			Out of high school, I persued my Bachelor's in Computer Science at Drexel University in Philadelphia, PA. I decided on a 5 year program with three 6-month work experiences (co-ops) to gain professional experience before graduation.
+			Out of high school, I pursued my Bachelor's in Computer Science at Drexel University in Philadelphia, PA. I decided on a 5 year program with three 6-month work experiences (co-ops) to gain professional experience before graduation.
 		</p>
 		<img
 			src="/images/philly.webp"
